@@ -1,0 +1,43 @@
+[
+  {
+    "use_case": "Antibody titre",
+    "buyer_language": "Process development, cell line development, clone screening",
+    "problem_to_recognise": "ELISA or central lab readouts slow clone or condition selection",
+    "technical_terms_to_use": "titre, CHO, supernatant, clone screening, process development",
+    "safe_product_angle": "Faster access to titre data during screening and early process development",
+    "avoid_terms": "revolutionise, unlock, transform"
+  },
+  {
+    "use_case": "AAV capsid quantification",
+    "buyer_language": "Gene therapy, analytical development, vector production",
+    "problem_to_recognise": "Capsid data arrives too late to guide upstream or process decisions",
+    "technical_terms_to_use": "AAV, capsid, upstream optimisation, process conditions, analytical workflow",
+    "safe_product_angle": "Bring capsid measurement closer to the workflow",
+    "avoid_terms": "game changing, seamless, at scale"
+  },
+  {
+    "use_case": "His tagged protein",
+    "buyer_language": "Protein expression, purification, protein engineering",
+    "problem_to_recognise": "Expression checks are slow or noisy before purification decisions",
+    "technical_terms_to_use": "His tagged protein, crude lysate, expression level, purification decision",
+    "safe_product_angle": "Quantify His tagged protein from crude or purified samples",
+    "avoid_terms": "cutting edge, end to end, ecosystem"
+  },
+  {
+    "use_case": "Academic bioprocess",
+    "buyer_language": "Research group, core facility, translational lab",
+    "problem_to_recognise": "Multiple users need reliable results without heavy training",
+    "technical_terms_to_use": "sample throughput, assay setup, training burden, shared workflow",
+    "safe_product_angle": "Easier adoption across different biologics projects",
+    "avoid_terms": "democratise, platform for everyone"
+  },
+  {
+    "use_case": "CDMO process development",
+    "buyer_language": "Process development, client projects, analytical support",
+    "problem_to_recognise": "Varied client methods and sample matrices create workflow friction",
+    "technical_terms_to_use": "method fit, sample matrix, development workflow, turnaround time",
+    "safe_product_angle": "Compare where current measurement delay sits",
+    "avoid_terms": "one stop shop, seamless workflow"
+  }
+]
+

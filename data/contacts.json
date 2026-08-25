@@ -1,0 +1,63 @@
+[
+  {
+    "contact_id": "contact_001",
+    "name": "Dr Sophie Martin",
+    "first_name": "Sophie",
+    "email": "sophie.martin@vectornova.example",
+    "job_title": "Director of Analytical Development",
+    "conference_name": "ESACT 2026",
+    "primary_use_case": "AAV capsid quantification",
+    "buyer_role": "Technical evaluator",
+    "conference_lead_status": "Demo Requested",
+    "owner_reviewed": "Yes",
+    "lead_source": "Conference",
+    "no_deal_follow_up_flag": "No",
+    "close_out_reason": ""
+  },
+  {
+    "contact_id": "contact_002",
+    "name": "Dr James Patel",
+    "first_name": "James",
+    "email": "james.patel@northbridgebiologics.example",
+    "job_title": "Cell Line Development Lead",
+    "conference_name": "ESACT 2026",
+    "primary_use_case": "Antibody titre",
+    "buyer_role": "Technical evaluator",
+    "conference_lead_status": "Qualified for Review",
+    "owner_reviewed": "Yes",
+    "lead_source": "Conference",
+    "no_deal_follow_up_flag": "No",
+    "close_out_reason": ""
+  },
+  {
+    "contact_id": "contact_003",
+    "name": "Dr Elena Rossi",
+    "first_name": "Elena",
+    "email": "elena.rossi@helixprotein.example",
+    "job_title": "Protein Scientist",
+    "conference_name": "ESACT 2026",
+    "primary_use_case": "His tagged protein",
+    "buyer_role": "User",
+    "conference_lead_status": "Follow Up Open",
+    "owner_reviewed": "Yes",
+    "lead_source": "Conference",
+    "no_deal_follow_up_flag": "Yes",
+    "close_out_reason": ""
+  },
+  {
+    "contact_id": "contact_004",
+    "name": "Dr Maya Chen",
+    "first_name": "Maya",
+    "email": "maya.chen@universitylab.example",
+    "job_title": "Postdoctoral Researcher",
+    "conference_name": "ESACT 2026",
+    "primary_use_case": "Unknown",
+    "buyer_role": "Unknown",
+    "conference_lead_status": "Captured",
+    "owner_reviewed": "No",
+    "lead_source": "Conference",
+    "no_deal_follow_up_flag": "Yes",
+    "close_out_reason": ""
+  }
+]
+

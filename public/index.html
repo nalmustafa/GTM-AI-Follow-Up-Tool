@@ -1,0 +1,311 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTM Follow Up Console</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>GTM Follow Up Console</h1>
+        </div>
+      </div>
+
+      <nav class="nav-stack" aria-label="Main navigation">
+        <button class="nav-item active" data-view="tasksView">Tasks</button>
+        <button class="nav-item" data-view="draftView">Draft Assistant</button>
+        <button class="nav-item" data-view="metricsView">90-Day Metrics</button>
+        <button class="nav-item" data-view="setupView">Setup</button>
+      </nav>
+
+      <div class="status-panel">
+        <p class="panel-title">Connections</p>
+        <div class="status-row">
+          <span>HubSpot</span>
+          <strong id="hubspotStatus">Simulated</strong>
+        </div>
+        <div class="status-row">
+          <span>Notion</span>
+          <strong id="notionStatus">Simulated</strong>
+        </div>
+        <div class="status-row">
+          <span>OpenAI</span>
+          <strong id="openaiStatus">Checking</strong>
+        </div>
+        <div class="status-row">
+          <span>Gmail</span>
+          <strong id="gmailStatus">Checking</strong>
+        </div>
+        <div class="status-row">
+          <span>Mode</span>
+          <strong id="appMode">Demo safe</strong>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero compact-hero">
+        <div class="hero-title-row">
+          <h2>Task Management &amp; Follow-up Assistant</h2>
+        </div>
+        <div class="hero-actions action-row-under-title">
+          <button id="syncTasksBtn" class="button primary equal-action">Sync tasks</button>
+          <button id="demoModeBtn" class="button secondary equal-action">Reload demo data</button>
+        </div>
+      </header>
+
+      <section id="tasksView" class="view active">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Tasks</p>
+            <h3>Open and overdue follow-up tasks</h3>
+          </div>
+        </div>
+
+        <div class="table-card task-table-card">
+          <table class="task-queue-table">
+            <thead>
+              <tr>
+                <th><button id="dueSortBtn" class="sort-header" type="button">Due date â†‘</button></th>
+                <th>Task</th>
+                <th>Contact</th>
+                <th>Role</th>
+                <th>Company</th>
+                <th>Context</th>
+                <th>Drafts</th>
+              </tr>
+            </thead>
+            <tbody id="tasksTableBody">
+              <tr><td colspan="7" class="empty-state">Syncing open and overdue follow-up tasks...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination-bar" aria-label="Task queue pagination">
+          <button id="prevPageBtn" class="button secondary pagination-button" type="button">Previous</button>
+          <span id="taskPageStatus" class="pagination-status">Page 1 of 1</span>
+          <button id="nextPageBtn" class="button secondary pagination-button" type="button">Next</button>
+        </div>
+
+        <div class="grid two-column detail-grid">
+          <article class="card">
+            <div class="card-header">
+              <p class="eyebrow">Selected record</p>
+              <h4>HubSpot task</h4>
+            </div>
+            <dl id="taskDetail" class="definition-list muted-state">
+              <dt>No task selected</dt><dd>Select a row to view task data.</dd>
+            </dl>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <p class="eyebrow">Linked context</p>
+              <h4>Simulated Notion page</h4>
+            </div>
+            <dl id="notionDetail" class="definition-list muted-state">
+              <dt>No context selected</dt><dd>The linked Notion notes will appear here.</dd>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="draftView" class="view">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Human-in-the-loop review</p>
+            <h3>Follow-up Draft Assistant</h3>
+          </div>
+        </div>
+
+        <div class="grid two-column">
+          <article class="card compact-card">
+            <div class="card-header">
+              <p class="eyebrow">Input package</p>
+              <h4>Task, contact and Notion context</h4>
+            </div>
+            <div id="inputSummary" class="summary-box muted-state">Select a task first.</div>
+            <button id="generateDraftBtn" class="button primary full-width" disabled>Generate AI draft</button>
+          </article>
+
+          <article class="card compact-card">
+            <div class="card-header">
+              <p class="eyebrow">Mapper output</p>
+              <h4>Mapped fields and draft readiness</h4>
+            </div>
+            <div id="mapperOutput" class="insight-list muted-state">Mapper output will appear after generation.</div>
+          </article>
+        </div>
+
+        <div class="grid editor-grid">
+          <article class="card editor-card">
+            <div class="card-header split">
+              <div>
+                <p class="eyebrow">Editable draft</p>
+                <h4>Review before sending to drafts or contact</h4>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="emailTo">To</label>
+              <input id="emailTo" type="email" placeholder="prospect@example.com" />
+            </div>
+            <div class="form-row">
+              <label for="emailSubject">Subject</label>
+              <input id="emailSubject" type="text" placeholder="Follow up from ESACT" />
+            </div>
+            <div class="form-row">
+              <label for="draftEditor">Draft body</label>
+              <textarea id="draftEditor" rows="12" placeholder="Generated email will appear here. You can edit it before creating the draft."></textarea>
+            </div>
+            <div class="delivery-actions">
+              <p class="delivery-helper">After reviewing the generated email, choose whether to save it as a Gmail draft or send it from the app.</p>
+              <div class="button-row">
+                <button id="createDraftBtn" class="button primary" disabled>Send to my Drafts</button>
+                <button id="sendEmailBtn" class="button secondary" disabled>Send Email to Contact</button>
+              </div>
+            </div>
+          </article>
+
+          <aside class="side-output-stack">
+            <article class="card side-output">
+              <div class="card-header">
+                <p class="eyebrow">Task-specific history</p>
+                <h4>Draft history and task update</h4>
+              </div>
+              <div id="historyList" class="history-list">
+                <div class="history-empty">Select a task to view draft history.</div>
+              </div>
+            </article>
+
+            <article class="card side-output">
+              <div class="card-header split">
+                <div>
+                  <p class="eyebrow">HubSpot review step</p>
+                  <h4>Review HubSpot task update</h4>
+                </div>
+              </div>
+              <div id="crmRecommendationPanel" class="crm-panel is-empty">
+                <div class="history-empty">Generate a draft to prepare an editable task update recommendation.</div>
+              </div>
+              <button id="submitHubspotBtn" class="button secondary full-width" disabled>Save simulated HubSpot update</button>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section id="metricsView" class="view">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Task 3 support view</p>
+            <h3>First 90-day funnel metrics preview</h3>
+          </div>
+        </div>
+
+        <div id="metricsCards" class="metrics-grid"></div>
+
+        <div class="table-card dashboard-table">
+          <div class="card-header table-header">
+            <p class="eyebrow">Dashboard design</p>
+            <h4>Kim and Ruizhi views</h4>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>View</th>
+                <th>Dashboard card</th>
+                <th>Filter</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody id="dashboardRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="setupView" class="view">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Local configuration</p>
+            <h3>Setup and data mapping</h3>
+          </div>
+        </div>
+
+        <div class="connection-grid" id="connectionCards">
+          <article class="connection-card simulated">
+            <span>HubSpot</span>
+            <strong id="setupHubspotStatus">Simulated task sync</strong>
+            <small>Local JSON records mirror the task, contact, company and deal objects.</small>
+          </article>
+          <article class="connection-card simulated">
+            <span>Notion</span>
+            <strong id="setupNotionStatus">Simulated context</strong>
+            <small>Linked context notes are stored as local Notion-style records.</small>
+          </article>
+          <article class="connection-card" id="setupOpenaiCard">
+            <span>OpenAI</span>
+            <strong id="setupOpenaiStatus">Checking</strong>
+            <small id="setupOpenaiMeta">OPENAI_API_KEY in .env</small>
+          </article>
+          <article class="connection-card" id="setupGmailCard">
+            <span>Gmail</span>
+            <strong id="setupGmailStatus">Checking</strong>
+            <small id="setupGmailMeta">OAuth and token status.</small>
+            <button id="googleAuthBtn" class="button secondary connection-action" type="button">Connect Gmail</button>
+          </article>
+        </div>
+
+        <article class="card setup-details-card">
+          <div class="card-header split compact-detail-header">
+            <div>
+              <p class="eyebrow">Gmail safety</p>
+              <h4>Draft creation and live-send gate</h4>
+            </div>
+            <strong id="setupGmailSendStatus" class="status-warn">Checking</strong>
+          </div>
+          <p id="setupGmailSendMeta" class="setup-detail-copy">Set <code>ALLOW_LIVE_EMAIL_SEND=true</code> in .env to allow live sends.</p>
+        </article>
+
+        <div class="grid two-column setup-grid">
+          <article class="card">
+            <div class="card-header">
+              <p class="eyebrow">Backend credentials</p>
+              <h4>Environment variable checklist</h4>
+            </div>
+            <div class="table-card embedded-table">
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Connection</th>
+                    <th>Variable</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="credentialRows">
+                  <tr><td colspan="3" class="empty-state">Checking configuration...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="card mapping-card">
+            <div class="card-header">
+              <p class="eyebrow">Production mapping</p>
+              <h4>Required source and writeback fields</h4>
+            </div>
+            <div id="mappingTabs" class="mapping-tabs" role="tablist" aria-label="Production mapping field groups"></div>
+            <div id="mappingRows" class="mapping-list scrollable-mapping" aria-live="polite"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

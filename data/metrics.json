@@ -1,0 +1,84 @@
+{
+  "cards": [
+    {
+      "metric": "Conference lead to demo request rate",
+      "value": "31%",
+      "what_it_measures": "Reviewed event contacts converting to demo intent",
+      "why_now": "Shows whether conferences create real scientific intent rather than just contact volume.",
+      "reporting_setup": "Custom report using conference_lead_status grouped by conference_name and filtered where owner_reviewed equals Yes."
+    },
+    {
+      "metric": "Time to first meaningful follow up",
+      "value": "2.4 days median",
+      "what_it_measures": "Speed from event capture to real prospect-facing follow up",
+      "why_now": "Conference interest can decay quickly, and slow follow up weakens event return.",
+      "reporting_setup": "Calculated time between contact create date and last_meaningful_follow_up_date. Draft creation alone does not count."
+    },
+    {
+      "metric": "Next action coverage",
+      "value": "74% covered",
+      "what_it_measures": "Open deals or reviewed conference contacts with a future follow-up task",
+      "why_now": "Prevents silent stalls during a 6 to 18 month sales cycle.",
+      "reporting_setup": "Report open deals or reviewed conference contacts where no open future task exists, using hs_task_status and hs_timestamp."
+    },
+    {
+      "metric": "Demo to scientific evaluation rate",
+      "value": "42%",
+      "what_it_measures": "Whether demos progress into serious technical interest",
+      "why_now": "A demo is not enough for instrument sales. The key signal is whether the buyer starts evaluating scientific fit.",
+      "reporting_setup": "Deal stage conversion report from Demo Completed to Scientific Evaluation."
+    },
+    {
+      "metric": "Stage ageing",
+      "value": "3 deals > 21 days",
+      "what_it_measures": "How long open deals sit without movement or a next action",
+      "why_now": "A long sales cycle can hide stale deals if next actions are not enforced.",
+      "reporting_setup": "Deal stage ageing report with filters for open deals, overdue tasks and missing next action."
+    }
+  ],
+  "dashboard_rows": [
+    {
+      "view": "Kim",
+      "card": "Open and overdue conference follow-ups",
+      "filter": "lead_source equals Conference and open or overdue follow-up task exists",
+      "purpose": "Daily action management"
+    },
+    {
+      "view": "Kim",
+      "card": "Follow-ups without deals",
+      "filter": "no_deal_follow_up_flag equals Yes",
+      "purpose": "Resolve mixed-state leads"
+    },
+    {
+      "view": "Kim",
+      "card": "Blocked or weak-context tasks",
+      "filter": "blocked draft reason exists, primary_use_case is Unknown, or buyer_role is Unknown",
+      "purpose": "Add context or close out before drafting"
+    },
+    {
+      "view": "Kim",
+      "card": "Deals with no next action",
+      "filter": "Open deals with no open future task",
+      "purpose": "Prevent silent stalls"
+    },
+    {
+      "view": "Ruizhi",
+      "card": "Conference demand by use case",
+      "filter": "Conference contacts grouped by primary_use_case",
+      "purpose": "Market signal"
+    },
+    {
+      "view": "Ruizhi",
+      "card": "Scientific evaluations by application area",
+      "filter": "Deals in Scientific Evaluation grouped by application_area",
+      "purpose": "Product pull"
+    },
+    {
+      "view": "Ruizhi",
+      "card": "Close-out reasons by conference",
+      "filter": "Not a Fit contacts grouped by close_out_reason",
+      "purpose": "ICP refinement"
+    }
+  ]
+}
+

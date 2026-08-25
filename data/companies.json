@@ -1,0 +1,35 @@
+[
+  {
+    "company_id": "company_001",
+    "company": "VectorNova Bio",
+    "company_type": "Biotech",
+    "region": "Europe",
+    "application_area": "Gene therapy",
+    "existing_relationship": "Conference lead"
+  },
+  {
+    "company_id": "company_002",
+    "company": "Northbridge Biologics",
+    "company_type": "Biologics manufacturer",
+    "region": "UK",
+    "application_area": "Cell line development",
+    "existing_relationship": "Conference lead"
+  },
+  {
+    "company_id": "company_003",
+    "company": "Helix Protein Labs",
+    "company_type": "Protein engineering lab",
+    "region": "Europe",
+    "application_area": "Protein expression",
+    "existing_relationship": "Conference lead"
+  },
+  {
+    "company_id": "company_004",
+    "company": "University Translational Lab",
+    "company_type": "Academic lab",
+    "region": "Europe",
+    "application_area": "Academic bioprocess",
+    "existing_relationship": "Booth scan only"
+  }
+]
+

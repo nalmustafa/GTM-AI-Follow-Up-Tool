@@ -1,0 +1,63 @@
+[
+  {
+    "task_id": "task_001",
+    "task_subject": "Follow up after ESACT",
+    "task_note": "Follow up after ESACT and offer a short Amperia demo",
+    "due_date": "Overdue by 2 days",
+    "task_owner": "Kim",
+    "task_status": "Open",
+    "task_type": "Follow Up",
+    "contact_id": "contact_001",
+    "company_id": "company_001",
+    "notion_context_id": "notion_001",
+    "deal_id": "deal_001",
+    "due_date_iso": "2026-07-01",
+    "due_status": "Overdue by 2 days"
+  },
+  {
+    "task_id": "task_002",
+    "task_subject": "Follow up on clone screening discussion",
+    "task_note": "Ask whether faster titre data would help the clone screening workflow",
+    "due_date": "Overdue by 1 day",
+    "task_owner": "Kim",
+    "task_status": "Open",
+    "task_type": "Follow Up",
+    "contact_id": "contact_002",
+    "company_id": "company_002",
+    "notion_context_id": "notion_002",
+    "deal_id": "deal_002",
+    "due_date_iso": "2026-07-02",
+    "due_status": "Overdue by 1 day"
+  },
+  {
+    "task_id": "task_003",
+    "task_subject": "Ask about expression workflow",
+    "task_note": "Follow up on His tagged protein expression checks and sample matrix",
+    "due_date": "Due today",
+    "task_owner": "Kim",
+    "task_status": "Open",
+    "task_type": "Follow Up",
+    "contact_id": "contact_003",
+    "company_id": "company_003",
+    "notion_context_id": "notion_003",
+    "deal_id": null,
+    "due_date_iso": "2026-07-03",
+    "due_status": "Due today"
+  },
+  {
+    "task_id": "task_004",
+    "task_subject": "Conference contact review",
+    "task_note": "Review contact. Create a deal if there is real demo intent. Close out if there is no current fit.",
+    "due_date": "Overdue by 5 days",
+    "task_owner": "Kim",
+    "task_status": "Open",
+    "task_type": "Follow Up",
+    "contact_id": "contact_004",
+    "company_id": "company_004",
+    "notion_context_id": "notion_004",
+    "deal_id": null,
+    "due_date_iso": "2026-06-28",
+    "due_status": "Overdue by 5 days"
+  }
+]
+

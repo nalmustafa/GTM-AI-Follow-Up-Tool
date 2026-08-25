@@ -1,0 +1,39 @@
+[
+  {
+    "notion_context_id": "notion_001",
+    "page_title": "ESACT 2026 booth notes - VectorNova Bio",
+    "source_type": "Simulated Notion page",
+    "last_updated": "2026-06-22",
+    "context_note": "Sophie said capsid data often arrives too late to guide upstream condition selection. Their team sometimes continues process conditions before knowing which are worth keeping.",
+    "technical_pain": "Capsid readout delay slows upstream decisions.",
+    "recommended_next_step": "Offer 30 minute workflow comparison."
+  },
+  {
+    "notion_context_id": "notion_002",
+    "page_title": "ESACT 2026 booth notes - Northbridge Biologics",
+    "source_type": "Simulated Notion page",
+    "last_updated": "2026-06-22",
+    "context_note": "James said ELISA readouts slow clone screening. The team often waits before deciding which cultures to carry forward.",
+    "technical_pain": "Titre data arrives too late during clone screening.",
+    "recommended_next_step": "Discuss where faster titre readout could fit in the clone screening workflow."
+  },
+  {
+    "notion_context_id": "notion_003",
+    "page_title": "ESACT 2026 booth notes - Helix Protein Labs",
+    "source_type": "Simulated Notion page",
+    "last_updated": "2026-06-22",
+    "context_note": "Elena said expression checks are slow before purification and crude lysate results can be inconsistent. She wanted to understand whether Amperia could fit before purification decisions.",
+    "technical_pain": "Slow or noisy expression checks before purification.",
+    "recommended_next_step": "Ask about their expression workflow and sample matrix."
+  },
+  {
+    "notion_context_id": "notion_004",
+    "page_title": "ESACT 2026 booth notes - University Translational Lab",
+    "source_type": "Simulated Notion page",
+    "last_updated": "2026-06-22",
+    "context_note": "Maya scanned at the booth and asked for a general brochure. No specific workflow pain was captured.",
+    "technical_pain": "No specific scientific workflow captured.",
+    "recommended_next_step": "Ask owner to add context or close out as low fit."
+  }
+]
+

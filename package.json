@@ -1,0 +1,18 @@
+﻿{
+  "name": "gtm-follow-up-console",
+  "version": "1.0.0",
+  "description": "GTM Follow Up GTM Engineer interview prototype with simulated HubSpot task sync, Notion context, OpenAI draft generation, editable review, Gmail draft creation support, and funnel metrics preview.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "googleapis": "^140.0.1",
+    "openai": "^4.104.0"
+  }
+}
+
