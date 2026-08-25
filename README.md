@@ -1,6 +1,6 @@
 ﻿# GTM AI Task Follow Up Tool
 
-Local interview prototype for the GTM Follow Up GTM Engineer Stage 2 task.
+Naseef Al-Mustafa - GTM Tools Portfolio Local prototype
 
 ## What it demonstrates
 
