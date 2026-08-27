@@ -67,8 +67,3 @@ The zip excludes:
 * `node\_modules`
 * `package-lock.json`
 
-
-* Removed the extra visual gap between the task title and task note.
-* Removed the extra visual gap between company name and application area.
-* Kept table width, pagination, vertical scroll and blocked workflow unchanged.
-
